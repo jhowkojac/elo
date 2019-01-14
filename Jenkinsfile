@@ -1,13 +1,13 @@
 pipeline {
-    agente {
+    agent {
         docker {
-            imagem " rubi "
+            image "ruby"
         }
     }
-    estágios {
-        stage ( " Build " ) {
-            passos {
-                sh " bundle install "
+    stages {
+        stage("Build") {
+            steps {
+                sh "bundle install"
             }
         }
     }
